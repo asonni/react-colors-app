@@ -8,9 +8,7 @@ const generatePalette = starterPalette => {
     emoji: starterPalette.emoji,
     colors: {}
   };
-  for (let level of levels) {
-    newPalette.colors[level] = [];
-  }
+  for (let level of levels) newPalette.colors[level] = [];
   for (let color of starterPalette.colors) {
     let scale = getScale(color.color, 10).reverse();
     for (let i in scale) {
@@ -29,22 +27,18 @@ const generatePalette = starterPalette => {
   return newPalette;
 };
 
-const getRange = hexColor => {
-  const end = '#fff';
-  return [
-    chroma(hexColor)
-      .darken(1.4)
-      .hex(),
-    hexColor,
-    end
-  ];
-};
+const getRange = hexColor => [
+  chroma(hexColor)
+    .darken(1.4)
+    .hex(),
+  hexColor,
+  '#fff'
+];
 
-const getScale = (hexColor, numberOfColors) => {
-  return chroma
+const getScale = (hexColor, numberOfColors) =>
+  chroma
     .scale(getRange(hexColor))
     .mode('lab')
     .colors(numberOfColors);
-};
 
 export { generatePalette };

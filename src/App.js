@@ -5,6 +5,7 @@ import seedColors from './seedColors';
 import { generatePalette } from './colorHelpers';
 
 class App extends Component {
+  findPalette = id => seedColors.find(palette => palette.id === id);
   render() {
     return (
       <Switch>
@@ -12,11 +13,14 @@ class App extends Component {
         <Route
           exact
           path="/palette/:id"
-          render={() => <h1>INDIVIDUAL PALETTE</h1>}
+          render={routeProps => (
+            <Palette
+              palette={generatePalette(
+                this.findPalette(routeProps.match.params.id)
+              )}
+            />
+          )}
         />
-        {/* <div>
-          <Palette palette={generatePalette(seedColors[4])} />
-        </div> */}
       </Switch>
     );
   }

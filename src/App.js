@@ -10,10 +10,19 @@ import { generatePalette } from './colorHelpers';
 class App extends Component {
   findPalette = paletteId =>
     seedColors.find(palette => palette.id === paletteId);
+
+  savePalette = newPalette => {
+    console.log(newPalette);
+  };
+
   render() {
     return (
       <Switch>
-        <Route exact path="/palette/new" render={() => <NewPaletteForm />} />
+        <Route
+          exact
+          path="/palette/new"
+          render={() => <NewPaletteForm savePalette={this.savePalette} />}
+        />
         <Route
           exact
           path="/"

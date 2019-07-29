@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
+
 import NewPaletteForm from './NewPaletteForm';
 import PaletteList from './PaletteList';
 import Palette from './Palette';

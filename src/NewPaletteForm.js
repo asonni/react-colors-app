@@ -113,8 +113,14 @@ const NewPaletteForm = props => {
   };
 
   const handleSubmit = () => {
-    const newPalette = { colors, paletteName: 'New Test Palette' };
-    props.savePalette(colors);
+    let paletteName = 'New Test Palette';
+    const newPalette = {
+      colors,
+      paletteName,
+      id: paletteName.toLowerCase().replace(/ /g, '-')
+    };
+    props.savePalette(newPalette);
+    props.history.push('/');
   };
 
   return (

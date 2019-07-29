@@ -1,6 +1,7 @@
 import chroma from 'chroma-js';
+import { makeStyles } from '@material-ui/core/styles';
 
-export default {
+export default makeStyles({
   ColorBox: {
     width: '20%',
     height: props => (props.showingFullPalette ? '25%' : '50%'),
@@ -118,4 +119,4 @@ export default {
     transition: 'all 0.4s ease-in-out',
     transitionDelay: '0.3'
   }
-};
+});

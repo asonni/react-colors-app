@@ -1,4 +1,6 @@
-export default {
+import { makeStyles } from '@material-ui/core/styles';
+
+export default makeStyles({
   Navbar: {
     display: 'flex',
     alignItems: 'center',
@@ -44,4 +46,4 @@ export default {
     marginLeft: 'auto',
     marginRight: '1rem'
   }
-};
+});

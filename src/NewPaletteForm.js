@@ -19,9 +19,9 @@ import useStyles from './styles/NewPaletteFormStyles';
 
 const NewPaletteForm = props => {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [currentColor, setCurrentColor] = useState('teal');
-  const [colors, setColors] = useState([{ color: 'blue', name: 'blue' }]);
+  const [colors, setColors] = useState(props.palettes[0].colors);
   const [newColorName, setNewColorName] = useState('');
   const [newPaletteName, setNewPaletteName] = useState('');
 
@@ -52,8 +52,7 @@ const NewPaletteForm = props => {
   };
 
   const addNewColor = () => {
-    const newColor = { color: currentColor, name: newColorName };
-    setColors([...colors, newColor]);
+    setColors([...colors, { color: currentColor, name: newColorName }]);
     setNewColorName('');
   };
 
@@ -65,6 +64,18 @@ const NewPaletteForm = props => {
     setNewPaletteName(e.target.value);
   };
 
+  const removeColor = colorName => () => {
+    setColors(colors.filter(color => color.name !== colorName));
+  };
+
+  const onSortEnd = ({ oldIndex, newIndex }) => {
+    setColors(arrayMove(colors, oldIndex, newIndex));
+  };
+
+  const clearColors = () => {
+    setColors([]);
+  };
+
   const handleSubmit = () => {
     const newPalette = {
       colors,
@@ -73,14 +84,6 @@ const NewPaletteForm = props => {
     };
     props.savePalette(newPalette);
     props.history.push('/');
-  };
-
-  const removeColor = colorName => () => {
-    setColors(colors.filter(color => color.name !== colorName));
-  };
-
-  const onSortEnd = ({ oldIndex, newIndex }) => {
-    setColors(arrayMove(colors, oldIndex, newIndex));
   };
 
   return (
@@ -141,7 +144,7 @@ const NewPaletteForm = props => {
         <Divider />
         <Typography variant="h4">Design Your Palette</Typography>
         <div>
-          <Button variant="contained" color="secondary">
+          <Button variant="contained" color="secondary" onClick={clearColors}>
             Clear Palette
           </Button>
           <Button variant="contained" color="primary">

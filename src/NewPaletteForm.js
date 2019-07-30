@@ -17,6 +17,8 @@ import { arrayMove } from 'react-sortable-hoc';
 import DraggableColorList from './DraggableColorList';
 import useStyles from './styles/NewPaletteFormStyles';
 
+const maxColors = 20;
+
 const NewPaletteForm = props => {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
@@ -24,6 +26,7 @@ const NewPaletteForm = props => {
   const [colors, setColors] = useState(props.palettes[0].colors);
   const [newColorName, setNewColorName] = useState('');
   const [newPaletteName, setNewPaletteName] = useState('');
+  const paletteIsFull = colors.length >= maxColors;
 
   useEffect(() => {
     ValidatorForm.addValidationRule('isColorNameUnique', value =>
@@ -74,6 +77,14 @@ const NewPaletteForm = props => {
 
   const clearColors = () => {
     setColors([]);
+  };
+
+  const addRandomColor = () => {
+    // Pick random color from existing palettes
+    const allColors = props.palettes.map(p => p.colors).flat();
+    const rand = Math.floor(Math.random() * allColors.length);
+    const randomColor = allColors[rand];
+    setColors([...colors, randomColor]);
   };
 
   const handleSubmit = () => {
@@ -147,7 +158,12 @@ const NewPaletteForm = props => {
           <Button variant="contained" color="secondary" onClick={clearColors}>
             Clear Palette
           </Button>
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            disabled={paletteIsFull}
+            onClick={addRandomColor}
+          >
             Random Color
           </Button>
         </div>
@@ -171,9 +187,10 @@ const NewPaletteForm = props => {
             variant="contained"
             type="submit"
             color="primary"
-            style={{ backgroundColor: currentColor }}
+            disabled={paletteIsFull}
+            style={{ backgroundColor: paletteIsFull ? 'grey' : currentColor }}
           >
-            Add Color
+            {paletteIsFull ? 'Palette Full' : 'Add Color'}
           </Button>
         </ValidatorForm>
       </Drawer>

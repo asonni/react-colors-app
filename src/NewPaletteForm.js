@@ -67,7 +67,6 @@ const NewPaletteForm = props => {
     <div className={classes.root}>
       <PaletteFormNav
         open={open}
-        classes={classes}
         palettes={props.palettes}
         handleSubmit={handleSubmit}
         handleDrawerOpen={handleDrawerOpen}

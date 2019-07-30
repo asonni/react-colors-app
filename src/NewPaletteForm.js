@@ -86,25 +86,35 @@ const NewPaletteForm = props => {
           </IconButton>
         </div>
         <Divider />
-        <Typography variant="h4">Design Your Palette</Typography>
-        <div>
-          <Button variant="contained" color="secondary" onClick={clearColors}>
-            Clear Palette
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            disabled={paletteIsFull}
-            onClick={addRandomColor}
-          >
-            Random Color
-          </Button>
+        <div className={classes.container}>
+          <Typography variant="h4" gutterBottom>
+            Design Your Palette
+          </Typography>
+          <div className={classes.buttons}>
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={clearColors}
+              className={classes.button}
+            >
+              Clear Palette
+            </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              disabled={paletteIsFull}
+              onClick={addRandomColor}
+              className={classes.button}
+            >
+              Random Color
+            </Button>
+          </div>
+          <ColorPickerForm
+            colors={colors}
+            addNewColor={addNewColor}
+            paletteIsFull={paletteIsFull}
+          />
         </div>
-        <ColorPickerForm
-          colors={colors}
-          addNewColor={addNewColor}
-          paletteIsFull={paletteIsFull}
-        />
       </Drawer>
       <main
         className={clsx(classes.content, {

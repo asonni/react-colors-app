@@ -12,8 +12,9 @@ import PaletteFormNav from './PaletteFormNav';
 import ColorPickerForm from './ColorPickerForm';
 import DraggableColorList from './DraggableColorList';
 import useStyles from './styles/NewPaletteFormStyles';
+import { MAX_COLORS } from './constants';
 
-const maxColors = 20;
+const maxColors = MAX_COLORS;
 
 const NewPaletteForm = props => {
   const classes = useStyles();

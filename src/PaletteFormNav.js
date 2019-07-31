@@ -13,7 +13,12 @@ import useStyles from './styles/PaletteFormNavStyles';
 
 const PaletteFormNav = props => {
   const classes = useStyles();
+  const [formShowing, setFormShowing] = useState(false);
   const { open, palettes, handleSubmit, handleDrawerOpen } = props;
+
+  const showForm = () => {
+    setFormShowing(true);
+  };
 
   return (
     <div className={classes.root}>
@@ -39,14 +44,28 @@ const PaletteFormNav = props => {
           </Typography>
         </Toolbar>
         <div className={classes.navBtns}>
-          <PaletteMetaFrom palettes={palettes} handleSubmit={handleSubmit} />
           <Link to="/">
-            <Button variant="contained" color="secondary">
+            <Button
+              variant="contained"
+              color="secondary"
+              className={classes.button}
+            >
               Go Back
             </Button>
           </Link>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={showForm}
+            className={classes.button}
+          >
+            Save
+          </Button>
         </div>
       </AppBar>
+      {formShowing && (
+        <PaletteMetaFrom palettes={palettes} handleSubmit={handleSubmit} />
+      )}
     </div>
   );
 };

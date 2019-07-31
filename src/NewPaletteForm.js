@@ -53,12 +53,9 @@ const NewPaletteForm = props => {
     setColors([...colors, randomColor]);
   };
 
-  const handleSubmit = newPaletteName => () => {
-    const newPalette = {
-      colors,
-      paletteName: newPaletteName,
-      id: newPaletteName.toLowerCase().replace(/ /g, '-')
-    };
+  const handleSubmit = newPalette => {
+    newPalette.colors = colors;
+    newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, '-');
     props.savePalette(newPalette);
     props.history.push('/');
   };

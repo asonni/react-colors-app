@@ -24,6 +24,10 @@ const App = () => {
     setPalettes([...palettes, newPalette]);
   };
 
+  const deletePalette = id => {
+    setPalettes(palettes.filter(palette => palette.id !== id));
+  };
+
   return (
     <Switch>
       <Route
@@ -41,7 +45,11 @@ const App = () => {
         exact
         path="/"
         render={routeProps => (
-          <PaletteList {...routeProps} palettes={palettes} />
+          <PaletteList
+            {...routeProps}
+            palettes={palettes}
+            deletePalette={deletePalette}
+          />
         )}
       />
       <Route

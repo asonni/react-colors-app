@@ -16,7 +16,7 @@ export default makeStyles({
     display: 'inline-block',
     position: 'relative',
     cursor: 'pointer',
-    marginBottom: '-3.5px',
+    marginBottom: '-5.5px',
     opacity: '1',
     backgroundColor: 'black',
     '& a': {

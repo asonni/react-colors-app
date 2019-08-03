@@ -1,14 +1,17 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 import sizes from './sizes';
+import bg from './bg.svg';
 
 export default makeStyles({
   root: {
-    backgroundColor: 'blue',
+    // backgroundColor: 'blue',
     height: '100vh',
     display: 'flex',
     alignItems: 'flex-start',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: '#350eaa',
+    backgroundImage: `url(${bg})`
   },
   container: {
     width: '50%',

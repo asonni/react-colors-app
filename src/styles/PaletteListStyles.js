@@ -5,13 +5,17 @@ import bg from './bg.svg';
 
 export default makeStyles({
   root: {
-    // backgroundColor: 'blue',
     height: '100vh',
     display: 'flex',
     alignItems: 'flex-start',
     justifyContent: 'center',
+    // background by SVGBackgrounds.com
     backgroundColor: '#350eaa',
-    backgroundImage: `url(${bg})`
+    backgroundImage: `url(${bg})`,
+    overflowY: 'scroll'
+  },
+  heading: {
+    fontSize: '2rem'
   },
   container: {
     width: '50%',
@@ -48,7 +52,7 @@ export default makeStyles({
     },
     [sizes.down('xs')]: {
       gridTemplateColumns: 'repeat(1, 100%)',
-      gridGap: '0.5rem'
+      gridGap: '1.4rem'
     }
   }
 });

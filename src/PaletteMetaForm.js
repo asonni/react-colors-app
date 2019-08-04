@@ -21,7 +21,7 @@ const PaletteMetaForm = props => {
         ({ paletteName }) => paletteName.toLowerCase() !== value.toLowerCase()
       )
     );
-  });
+  }, [palettes]);
 
   const handleChangePaletteName = e => {
     setNewPaletteName(e.target.value);

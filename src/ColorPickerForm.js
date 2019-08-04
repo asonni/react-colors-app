@@ -18,7 +18,7 @@ const ColorPickerForm = props => {
     ValidatorForm.addValidationRule('isColorUnique', () =>
       colors.every(({ color }) => color !== currentColor)
     );
-  });
+  }, [colors, currentColor]);
 
   const updateCurrentColor = newColor => {
     setCurrentColor(newColor.hex);

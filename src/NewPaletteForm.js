@@ -121,11 +121,11 @@ const NewPaletteForm = props => {
       >
         <div className={classes.drawerHeader} />
         <DraggableColorList
-          colors={colors}
-          removeColor={removeColor}
           axis="xy"
-          onSortEnd={onSortEnd}
           distance={20}
+          colors={colors}
+          onSortEnd={onSortEnd}
+          removeColor={removeColor}
         />
       </main>
     </div>

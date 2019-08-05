@@ -37,6 +37,7 @@ const PaletteMetaForm = props => {
 
   const savePalette = ({ native }) => {
     handleSubmit({ paletteName: newPaletteName, emoji: native });
+    setStage();
   };
 
   const cancelForm = () => {

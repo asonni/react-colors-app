@@ -4,8 +4,9 @@ import { SortableElement } from 'react-sortable-hoc';
 
 import useStyles from './styles/DraggableColorBoxStyles';
 
-const DraggableColorBox = SortableElement(({ color, name, handleClick }) => {
-  const classes = useStyles();
+const DraggableColorBox = SortableElement(props => {
+  const classes = useStyles(props);
+  const { color, name, handleClick } = props;
   return (
     <div className={classes.root} style={{ backgroundColor: color }}>
       <div className={classes.boxContent}>

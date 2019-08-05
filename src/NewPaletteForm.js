@@ -12,6 +12,7 @@ import PaletteFormNav from './PaletteFormNav';
 import ColorPickerForm from './ColorPickerForm';
 import DraggableColorList from './DraggableColorList';
 import useStyles from './styles/NewPaletteFormStyles';
+import seedColors from './seedColors';
 import { MAX_COLORS } from './constants';
 
 const maxColors = MAX_COLORS;
@@ -19,7 +20,7 @@ const maxColors = MAX_COLORS;
 const NewPaletteForm = props => {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
-  const [colors, setColors] = useState(props.palettes[0].colors);
+  const [colors, setColors] = useState(seedColors[0].colors);
   const paletteIsFull = colors.length >= maxColors;
 
   const handleDrawerOpen = () => {

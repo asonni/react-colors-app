@@ -5,7 +5,7 @@ import useStyles from './styles/MiniPaletteStyles';
 
 const MiniPalette = props => {
   const classes = useStyles();
-  const { id, paletteName, emoji, colors, handleClick, handleDelete } = props;
+  const { id, paletteName, emoji, colors, handleClick, openDialog } = props;
 
   const miniColorBoxes = colors.map(color => (
     <div
@@ -17,7 +17,7 @@ const MiniPalette = props => {
 
   const deletePalette = e => {
     e.stopPropagation();
-    handleDelete(id);
+    openDialog(id);
   };
 
   return (

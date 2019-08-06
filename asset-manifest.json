@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-colors-app/static/css/main.157037d3.chunk.css",
-    "main.js": "/react-colors-app/static/js/main.af370302.chunk.js",
-    "main.js.map": "/react-colors-app/static/js/main.af370302.chunk.js.map",
+    "main.css": "/react-colors-app/static/css/main.9c7310bd.chunk.css",
+    "main.js": "/react-colors-app/static/js/main.4056d703.chunk.js",
+    "main.js.map": "/react-colors-app/static/js/main.4056d703.chunk.js.map",
     "runtime~main.js": "/react-colors-app/static/js/runtime~main.c591a86d.js",
     "runtime~main.js.map": "/react-colors-app/static/js/runtime~main.c591a86d.js.map",
-    "static/css/2.e337d257.chunk.css": "/react-colors-app/static/css/2.e337d257.chunk.css",
-    "static/js/2.9b1388a0.chunk.js": "/react-colors-app/static/js/2.9b1388a0.chunk.js",
-    "static/js/2.9b1388a0.chunk.js.map": "/react-colors-app/static/js/2.9b1388a0.chunk.js.map",
+    "static/css/2.e8e75e1a.chunk.css": "/react-colors-app/static/css/2.e8e75e1a.chunk.css",
+    "static/js/2.6bb031be.chunk.js": "/react-colors-app/static/js/2.6bb031be.chunk.js",
+    "static/js/2.6bb031be.chunk.js.map": "/react-colors-app/static/js/2.6bb031be.chunk.js.map",
     "index.html": "/react-colors-app/index.html",
-    "precache-manifest.96b4c30c49d5dd80727c07245f9ca446.js": "/react-colors-app/precache-manifest.96b4c30c49d5dd80727c07245f9ca446.js",
+    "precache-manifest.811b895ec2312bf6963172b45debe24c.js": "/react-colors-app/precache-manifest.811b895ec2312bf6963172b45debe24c.js",
     "service-worker.js": "/react-colors-app/service-worker.js",
-    "static/css/2.e337d257.chunk.css.map": "/react-colors-app/static/css/2.e337d257.chunk.css.map",
-    "static/css/main.157037d3.chunk.css.map": "/react-colors-app/static/css/main.157037d3.chunk.css.map",
+    "static/css/2.e8e75e1a.chunk.css.map": "/react-colors-app/static/css/2.e8e75e1a.chunk.css.map",
+    "static/css/main.9c7310bd.chunk.css.map": "/react-colors-app/static/css/main.9c7310bd.chunk.css.map",
     "static/media/bg.svg": "/react-colors-app/static/media/bg.898d1731.svg"
   }
 }

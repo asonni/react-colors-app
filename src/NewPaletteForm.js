@@ -6,6 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { arrayMove } from 'react-sortable-hoc';
 
 import PaletteFormNav from './PaletteFormNav';
@@ -71,6 +72,7 @@ const NewPaletteForm = props => {
 
   return (
     <div className={classes.root}>
+      <CssBaseline />
       <PaletteFormNav
         open={open}
         palettes={props.palettes}

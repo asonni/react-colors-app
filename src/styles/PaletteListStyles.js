@@ -21,7 +21,7 @@ export default makeStyles({
     // background by SVGBackgrounds.com
     backgroundColor: '#350eaa',
     backgroundImage: `url(${bg})`,
-    overflowY: 'scroll'
+    overflow: 'scroll'
   },
   heading: {
     fontSize: '2rem'

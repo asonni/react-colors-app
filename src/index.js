@@ -1,26 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/styles';
-import { createMuiTheme } from '@material-ui/core/styles';
 
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const theme = createMuiTheme({
-  palette: {
-    type: 'light'
-  }
-});
-
 ReactDOM.render(
   <HashRouter>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+    <App />
   </HashRouter>,
   document.getElementById('root')
 );

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1b9f763b4fe8e017e62cf37028f10c67",
+    "revision": "5cf9cc36853196b3e65206fe280357d4",
     "url": "/react-colors-app/index.html"
   },
   {
-    "revision": "c29697cb4e602446c638",
-    "url": "/react-colors-app/static/css/2.e8e75e1a.chunk.css"
+    "revision": "aee1235f9049ae0fe00b",
+    "url": "/react-colors-app/static/css/2.e337d257.chunk.css"
   },
   {
-    "revision": "e7415f21959a288061f0",
+    "revision": "4171758f02c5256a3f94",
     "url": "/react-colors-app/static/css/main.9c7310bd.chunk.css"
   },
   {
-    "revision": "c29697cb4e602446c638",
-    "url": "/react-colors-app/static/js/2.6bb031be.chunk.js"
+    "revision": "aee1235f9049ae0fe00b",
+    "url": "/react-colors-app/static/js/2.6caa6065.chunk.js"
   },
   {
-    "revision": "e7415f21959a288061f0",
-    "url": "/react-colors-app/static/js/main.4056d703.chunk.js"
+    "revision": "4171758f02c5256a3f94",
+    "url": "/react-colors-app/static/js/main.8e05f3ba.chunk.js"
   },
   {
     "revision": "33ae901c7e870ee49837",
